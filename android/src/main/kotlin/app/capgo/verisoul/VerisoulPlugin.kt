@@ -101,7 +101,7 @@ class VerisoulPlugin : Plugin() {
 
     private fun rejectVerisoul(call: PluginCall, prefix: String, exception: Throwable) {
         val code = (exception as? VerisoulException)?.code ?: errorCodeFromMessage(exception)
-        call.reject("$prefix: ${exception.message}", code, exception)
+        call.reject("$prefix: ${exception.message}", code, exception.asException())
     }
 
     private fun errorCodeFromMessage(exception: Throwable): String {
@@ -112,5 +112,9 @@ class VerisoulPlugin : Plugin() {
             message.contains("SESSION") -> VerisoulErrorCodes.SESSION_UNAVAILABLE
             else -> "UNKNOWN_ERROR"
         }
+    }
+
+    private fun Throwable.asException(): Exception {
+        return this as? Exception ?: Exception(this)
     }
 }
