@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@capgo/capacitor-verisoul Example</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>@capgo/capacitor-verisoul</h1>
+      <p class="lead">Validate Verisoul native session collection.</p>
+
+      <label for="environment">Environment</label>
+      <select id="environment">
+        <option value="prod">prod</option>
+        <option value="sandbox">sandbox</option>
+        <option value="dev">dev</option>
+      </select>
+
+      <label for="project-id">Project ID</label>
+      <input id="project-id" type="text" autocomplete="off" />
+
+      <div class="actions">
+        <button id="configure">Configure</button>
+        <button id="get-session">Get session</button>
+        <button id="reinitialize">Reinitialize</button>
+      </div>
+
+      <pre id="plugin-output">Press a button to run an action.</pre>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
