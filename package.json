@@ -1,6 +1,6 @@
 {
   "name": "@capgo/capacitor-verisoul",
-  "version": "8.0.2",
+  "version": "8.0.3",
   "description": "Capacitor plugin for Verisoul fraud prevention sessions.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
