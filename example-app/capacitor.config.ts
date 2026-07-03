@@ -4,7 +4,7 @@ import pkg from './package.json';
 
 const config: CapacitorConfig = {
   appId: 'app.capgo.verisoul.example',
-  appName: 'Verisoul Example',
+  appName: '@capgo/capacitor-verisoul',
   webDir: 'dist',
   plugins: {
     SplashScreen: {
