@@ -157,16 +157,12 @@ function collectScanRoots(pluginDir, pkg) {
   const cap = typeof pkg.capacitor === "object" && pkg.capacitor ? pkg.capacitor : {};
   const roots = [];
   if (cap.android) {
-    const androidMain = path.join(pluginDir, "android", "src", "main");
-    if (exists(androidMain)) roots.push(androidMain);
+    const androidRoot = path.join(pluginDir, cap.android.src ?? "android");
+    if (exists(androidRoot)) roots.push(androidRoot);
   }
   if (cap.ios) {
-    const iosSources = path.join(pluginDir, "ios", "Sources");
-    if (exists(iosSources)) roots.push(iosSources);
-    else {
-      const iosDir = path.join(pluginDir, "ios");
-      if (exists(iosDir)) roots.push(iosDir);
-    }
+    const iosRoot = path.join(pluginDir, cap.ios.src ?? "ios");
+    if (exists(iosRoot)) roots.push(iosRoot);
   }
   const packageSwift = path.join(pluginDir, "Package.swift");
   if (exists(packageSwift)) roots.push(packageSwift);
@@ -215,7 +211,7 @@ if (!cap.android && !cap.ios) {
   process.exit(0);
 }
 
-const scanRoots = collectScanRoots(pluginDir, cap);
+const scanRoots = collectScanRoots(pluginDir, pkg);
 const allExts = [...new Set(RULES.flatMap((r) => r.exts))];
 const files = [];
 for (const root of scanRoots) {
