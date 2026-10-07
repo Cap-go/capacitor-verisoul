@@ -1,13 +1,27 @@
 # @capgo/capacitor-verisoul
 
-<a href="https://capgo.app/"><img src="https://capgo.app/readme-banner.svg?repo=Cap-go/capacitor-verisoul" alt="Capgo - Instant updates for Capacitor" /></a>
+Detect fake accounts and fraud in your Capacitor app with Verisoul's native SDKs, and send a session ID to your backend for risk checks.
+
+<a href="https://capgo.app/?ref=plugin_verisoul"><img src="https://capgo.app/readme-banner.svg?repo=Cap-go/capacitor-verisoul" alt="Capgo - Instant updates for Capacitor" /></a>
 
 <div align="center">
-  <h2><a href="https://capgo.app/?ref=plugin_verisoul"> Get Instant updates for your App with Capgo</a></h2>
-  <h2><a href="https://capgo.app/consulting/?ref=plugin_verisoul"> Missing a feature? We'll build the plugin for you</a></h2>
+  <p><b>Capgo</b>: open-source live updates for Ionic and Capacitor apps. Ship OTA fixes and features instantly, without waiting for app store review.</p>
+  <h2><a href="https://capgo.app/register/?ref=plugin_verisoul">➡️ Get started for free</a></h2>
+  <p>14-day unlimited free trial. No credit card required</p>
+  <p><a href="https://capgo.app/consulting/?ref=plugin_verisoul">Missing a feature? We'll build the plugin for you 💪</a></p>
 </div>
 
-Capacitor plugin for Verisoul native fraud-prevention sessions.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cap-go/capacitor-verisoul/main/assets/github-social-preview.png" alt="@capgo/capacitor-verisoul for Capacitor apps" width="300" />
+</p>
+
+## Key features
+
+- **Setup**: `configure()` with your Verisoul environment and project ID.
+- **Sessions**: `getSessionId()` returns the session to verify on your server.
+- **Fresh start**: `reinitialize()` resets signal collection and starts a new session.
+- **Touch signals**: `recordTouchEvent()` forwards touch events for behavioral analysis.
+- **Platforms**: iOS and Android. Uses the Verisoul iOS and Android SDKs. Not available on web.
 
 ## Installation
 
