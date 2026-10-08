@@ -20,7 +20,7 @@ Detect fake accounts and fraud in your Capacitor app with Verisoul's native SDKs
 - **Setup**: `configure()` with your Verisoul environment and project ID.
 - **Sessions**: `getSessionId()` returns the session to verify on your server.
 - **Fresh start**: `reinitialize()` resets signal collection and starts a new session.
-- **Touch signals**: `recordTouchEvent()` forwards touch events for behavioral analysis.
+- **Touch signals**: `recordTouchEvent()` forwards touch events for behavioral analysis on Android. It is a no-op on iOS.
 - **Platforms**: iOS and Android. Uses the Verisoul iOS and Android SDKs. Not available on web.
 
 ## Installation
